@@ -1,0 +1,13 @@
+---
+import './style.scss';
+
+interface Props {
+    image: any
+}
+
+const {image} = Astro.props;
+---
+
+<div class="icon">
+    <Fragment set:html={image}/>
+</div>

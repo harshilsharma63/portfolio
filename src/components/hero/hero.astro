@@ -1,5 +1,9 @@
 ---
 import './style.scss';
+import PillButton from "../pillButton/pillButton.astro";
+import Icon from "../icon/icon.astro";
+
+import chevron_down from '../../media/icons/chevron_down.svg?raw';
 ---
 
 <div class="hero">
@@ -7,4 +11,8 @@ import './style.scss';
         <span>Full Stack</span>
         <span>Developer</span>
     </div>
+    <PillButton>
+        <span>SCROLL DOWN</span>
+        <Icon image={chevron_down}/>
+    </PillButton>
 </div>

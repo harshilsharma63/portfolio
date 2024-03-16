@@ -1,0 +1,15 @@
+.pillButton {
+  background-color: var(--color-mid);
+  font-size: 20px;
+  height: 100px;
+  padding: 32px 42px;
+  border-radius: 50px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
