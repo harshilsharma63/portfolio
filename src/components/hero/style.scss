@@ -1,0 +1,16 @@
+.hero {
+  .title {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: bold;
+    font-size: 300px;
+    text-align: center;
+
+    span {
+      display: block;
+
+      &:last-child {
+        margin-top: -50px;
+      }
+    }
+  }
+}

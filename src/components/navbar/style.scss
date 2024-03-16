@@ -9,17 +9,21 @@
     background: var(--color-mid);
     width: min-content;
     height: 56px;
-    border-radius: 24px;
+    border-radius: 28px;
     font-size: 20px;
 
     .navbar_option {
       padding: 0 32px;
-      border-radius: 24px;
+      border-radius: 28px;
       cursor: pointer;
 
       &.selected {
         background: var(--color-text);
         color: var(--color-bg);
+      }
+
+      &:hover:not(.selected) {
+        background: hsl(from var(--color-mid) h s 20%);
       }
 
       span {
