@@ -1,0 +1,20 @@
+.intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 140%;
+
+  .quickConnect {
+    .subtitle {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+  }
+
+  .quickAbout {
+    text-align: right;
+    font-weight: bold;
+  }
+}

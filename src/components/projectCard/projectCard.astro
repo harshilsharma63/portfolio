@@ -1,0 +1,32 @@
+---
+import {Image} from 'astro:assets';
+
+import './style.scss';
+
+interface Props {
+    image: any
+    alignImage: 'center' | 'right'
+    title: string
+    subtitle: string
+    className: string
+}
+
+const {image, alignImage, title, subtitle, className} = Astro.props;
+
+---
+
+<div class="projectCard">
+    <div class:list={['thumbnail', className]}>
+        <Image
+            class={alignImage}
+            alt="project thumbnail"
+            src={image}
+        />
+    </div>
+    <div class="projectTitle">
+        <span>{title}</span>
+    </div>
+    <div class="projectSubtitle">
+        <span>{subtitle}</span>
+    </div>
+</div>

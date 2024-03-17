@@ -1,0 +1,63 @@
+---
+import './style.scss';
+import Icon from "../icon/icon.astro";
+
+import ProjectCard from "../projectCard/projectCard.astro";
+
+import arrow_right from '../../media/icons/arrow_right.svg?raw';
+
+import mattermost_thumbnail from '../../media/projectThumbnails/mattermost.png';
+import focalboard_thumbnail from '../../media/projectThumbnails/focalboard.png';
+import mobile_thumbnail from '../../media/projectThumbnails/mm-mobile.png';
+import standup_raven from '../../media/projectThumbnails/standup_raven.png';
+---
+
+<div class="projects">
+    <div class="header">
+        <div class="text">
+            <div class="title">
+                <span>Projects</span>
+            </div>
+            <div class="body">
+                <span>
+                    As a seasoned Full Stack Developer with a decade of experience crafting innovative and user-centric web solutions, my goal is to help you build the digital brand you envision.
+                </span>
+            </div>
+        </div>
+        <div class="moreLink">
+            <div>
+                More <Icon image={arrow_right}/>
+            </div>
+        </div>
+    </div>
+    <div class="projectCards">
+        <ProjectCard
+                className="mattermost"
+                image={mattermost_thumbnail}
+                alignImage='right'
+                title="Mattermost"
+                subtitle="Web App"
+        />
+        <ProjectCard
+                className="focalboard"
+                image={focalboard_thumbnail}
+                alignImage='right'
+                title="Focalboard"
+                subtitle="Web App"
+        />
+        <ProjectCard
+                className="mattermost-mobile"
+                image={mobile_thumbnail}
+                alignImage='right'
+                title="Mattermost Mobile App"
+                subtitle="Mobile App"
+        />
+        <ProjectCard
+                className="standup-raven"
+                image={standup_raven}
+                alignImage='right'
+                title="Standup Raven"
+                subtitle="Mattermost Plugin"
+        />
+    </div>
+</div>

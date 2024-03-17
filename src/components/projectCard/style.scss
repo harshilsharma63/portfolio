@@ -1,0 +1,32 @@
+.projectCard {
+  //border: 1px solid mediumseagreen;
+  width: 750px;
+  height: 750px;
+
+  .thumbnail {
+    aspect-ratio: 6 / 5;
+    width: 100%;
+    background: lightgreen;
+    border-radius: 32px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    img {
+      max-width: 625px;
+      height: auto;
+      border-radius: 24px 24px 0 0 ;
+    }
+  }
+
+  .projectTitle {
+    margin-bottom: 12px;
+  }
+
+  .projectTitle, .projectSubtitle {
+    font-size: 20px;
+  }
+}

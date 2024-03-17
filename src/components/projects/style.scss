@@ -1,0 +1,69 @@
+@use 'sass:color';
+
+.projects {
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+
+    .text {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      .title {
+        font-weight: bold;
+        font-size: 48px;
+      }
+
+      .body {
+        font-size: 24px;
+        line-height: 120%;
+      }
+    }
+
+    .moreLink {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      cursor: pointer;
+      font-size: 24px;
+
+      div {
+        .icon {
+          display: inline-block;
+
+          svg {
+            margin-bottom: -5px;
+          }
+        }
+      }
+    }
+  }
+
+  .projectCards {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .thumbnail.mattermost {
+      background: var(--color-neon-green);
+    }
+
+    .thumbnail.focalboard {
+      background: var(--color-bright-violet);
+    }
+
+    .thumbnail.mattermost-mobile {
+      background: var(--color-pink);
+    }
+
+    .thumbnail.standup-raven {
+      background: var(--color-lava-orange);
+    }
+  }
+}
