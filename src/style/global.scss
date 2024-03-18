@@ -12,3 +12,8 @@ body {
   flex-direction: column;
   gap: 52px;
 }
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
