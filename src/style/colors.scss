@@ -1,17 +1,27 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-dark-grey: #141414;
+
+$color-neon-green: #B9E31C;
+$color-bright-violet: #7A19F3;
+$color-pink: #EF5DA8;
+$color-lava-orange: #E3641B;
+
+
 body {
-    --color-neon-green: #B9E31C;
-    --color-bright-violet: #7A19F3;
-    --color-pink: #EF5DA8;
-    --color-lava-orange: #E3641B;
+    --color-neon-green: #{$color-neon-green};
+    --color-bright-violet: #{$color-bright-violet};
+    --color-pink: #{$color-pink};
+    --color-lava-orange: #{$color-lava-orange};
 }
 
 body.dark {
-    --color-bg: black;
-    --color-text: white;
-    --color-mid: #141414;
+    --color-bg: #{$color-black};
+    --color-text: #{$color-white};
+    --color-mid: #{$color-dark-grey};
 }
 
 body.light {
-    --color-bg: white;
-    --color-text: black;
+    --color-bg: #{$color-white};
+    --color-text: #{$color-black};
 }
