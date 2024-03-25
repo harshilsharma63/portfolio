@@ -1,0 +1,15 @@
+.contactFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+    .row {
+        justify-content: center;
+    }
+
+    p {
+        font-size: 160px;
+        font-weight: normal;
+        margin: 0;
+    }
+}

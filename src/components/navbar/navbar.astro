@@ -1,7 +1,53 @@
 ---
 import './style.scss';
 
+interface Props {
+    activeTab?: number
+    mode?: 'scroll' | 'nav'
+}
+
+const {activeTab, mode} = Astro.props;
+
 ---
+<script>
+    import utils from '../../utils/utils.ts';
+    
+    function setActiveTab() {
+        console.log('setActiveTab');
+        const pathName = window.location.pathname;
+
+        const tabs = Array.from(document.querySelectorAll('.navbar_option'));
+        tabs.forEach(tab => {
+            tab.classList.remove('selected');
+
+            if (tab.textContent?.toLowerCase().trim() === pathName.slice(1)) {
+                tab.classList.add('selected');
+            } else if (tab.textContent?.toLowerCase().trim() === 'home' && pathName === '/') {
+                tab.classList.add('selected');
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        setActiveTab();
+    }, false);
+    
+    // document.querySelector('.optionHome')?.addEventListener('click', () => {
+    //     utils.smoothScrollTo('top');
+    // });
+
+    // document.querySelector('.optionProjects')?.addEventListener('click', () => {
+    //     utils.smoothScrollTo('.projects');
+    // });
+
+    // document.querySelector('.optionAbout')?.addEventListener('click', () => {
+    //     utils.smoothScrollTo('.expertise');
+    // });
+
+    // document.querySelector('.optionContact')?.addEventListener('click', () => {
+    //     utils.smoothScrollTo('bottom', 0);
+    // });
+</script>
 
 <div class="navbar">
     <div class="navbarBody">
@@ -10,17 +56,25 @@ import './style.scss';
         </div>
 
         <div class="navbar_menu">
-            <div class="navbar_option selected">
-                <span>Home</span>
+            <div class="navbar_option selected optionHome">
+                <a href="/">
+                    <span>Home</span>
+                </a>
             </div>
-            <div class="navbar_option">
-                <span>Projects</span>
+            <div class="navbar_option optionProjects">
+                <a href="/projects">
+                    <span>Projects</span>
+                </a>
             </div>
-            <div class="navbar_option">
-                <span>About</span>
+            <div class="navbar_option optionAbout">
+                <a href="/about">
+                    <span>About</span>
+                </a>
             </div>
-            <div class="navbar_option">
-                <span>Contact</span>
+            <div class="navbar_option optionContact">
+                <a href="/contact">
+                    <span>Contact</span>
+                </a>
             </div>
         </div>
     </div>

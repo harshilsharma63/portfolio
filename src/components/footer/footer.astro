@@ -1,0 +1,26 @@
+---
+import './style.scss';
+---
+
+<script>
+    import utils from '../../utils/utils.ts';
+    document.querySelector('.copyMailButton')?.addEventListener('click', (e) => {
+        utils.copyEmailAddress(e);
+    });
+    
+</script>
+
+<div class="footer">
+    <div class="row">
+        <div class="left">
+            <span>{new Date().getFullYear()} ©</span>
+        </div>
+        
+        <div class="right">
+            <a href="https://github.com/harshilsharma63" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/harshilsharma63/" target="_blank">LinkedIn</a>
+            <a href="https://www.upwork.com/" target="_blank">UpWork</a>
+            <a class="copyMailButton">Mail</a>
+        </div>
+    </div>
+</div>

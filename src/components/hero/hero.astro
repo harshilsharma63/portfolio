@@ -6,12 +6,20 @@ import Icon from "../icon/icon.astro";
 import chevron_down from '../../media/icons/chevron_down.svg?raw';
 ---
 
+<script>
+    import utils from '../../utils/utils.ts';
+    
+    document.querySelector('.scrollDownButton')?.addEventListener('click', () => {
+        utils.smoothScrollTo('.projects');
+    });
+</script>
+
 <div class="hero">
     <div class="title">
         <span>Full Stack</span>
         <span>Developer</span>
     </div>
-    <PillButton>
+    <PillButton className="scrollDownButton">
         <span>SCROLL DOWN</span>
         <Icon image={chevron_down}/>
     </PillButton>

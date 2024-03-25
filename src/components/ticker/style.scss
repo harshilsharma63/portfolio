@@ -1,0 +1,15 @@
+.ticker {
+    .text {
+        margin-top: 300px;
+        margin-bottom: 200px;
+        background: var(--color-mid);
+        font-size: 200px;
+        font-weight: bolder;
+        white-space: nowrap;
+        overflow: hidden;
+        
+        span {
+            opacity: 0.4;
+        }
+    }
+}

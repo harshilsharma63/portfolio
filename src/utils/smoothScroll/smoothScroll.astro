@@ -1,0 +1,21 @@
+---
+import './style.scss';
+---
+
+<script>
+    import Lenis from "@studio-freight/lenis";
+
+    const options = {
+        smoothWheel: true,
+        lerp: 0.07,
+    };
+    const lenis = new Lenis(options);
+
+    function raf(time: number) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf);
+    window.lenis = lenis;
+</script>

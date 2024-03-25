@@ -2,6 +2,8 @@
 import {Image} from 'astro:assets';
 
 import './style.scss';
+import Icon from '../icon/icon.astro';
+import external_link from '../../media/icons/external_link.svg?raw'
 
 interface Props {
     image: any
@@ -9,13 +11,21 @@ interface Props {
     title: string
     subtitle: string
     className: string
+    link: string
 }
 
-const {image, alignImage, title, subtitle, className} = Astro.props;
+const {image, alignImage, title, subtitle, className, link} = Astro.props;
 
 ---
 
 <div class="projectCard">
+    <a
+        class="openProjectBtn"
+        href={link}
+        target="_blank"
+    >
+        <Icon image={external_link}/>
+    </a>
     <div class:list={['thumbnail', className]}>
         <Image
             class={alignImage}

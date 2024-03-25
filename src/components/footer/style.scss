@@ -1,0 +1,12 @@
+.footer {
+    font-size: 20px;
+
+    .right {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 42px;
+    }
+
+    margin-bottom: 50px;
+}

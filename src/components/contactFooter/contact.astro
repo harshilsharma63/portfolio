@@ -1,0 +1,20 @@
+---
+import './style.scss';
+
+import PillButton from "../pillButton/pillButton.astro";
+import Icon from "../icon/icon.astro"
+
+import arrow_top_right from "../../media/icons/arrow_top_right.svg?raw";
+---
+
+<div class="contactFooter">
+    <div class="row">
+        <p>Let's talk!</p>
+    </div>
+    
+    <div class="row">
+        <PillButton>
+            harshilsharma63@gmail.com <Icon image={arrow_top_right}/>
+        </PillButton>
+    </div>
+</div>

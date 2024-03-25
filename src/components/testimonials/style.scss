@@ -1,0 +1,50 @@
+.testimonials {
+    overflow: hidden;
+
+    h1 {
+        font-size: 72px;
+    }
+
+    .testimonialContainer {
+        display: flex;
+        flex-direction: row;
+
+        // SwiperJS styling variables
+        --swiper-pagination-bullet-width: 10px;
+        --swiper-pagination-bullet-height: 10px;
+        --swiper-pagination-color: var(--color-text);
+        --swiper-pagination-bullet-inactive-color: var(--color-text);
+        --swiper-pagination-bullet-horizontal-gap: 15px;
+
+        .testimonial {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 1600px;
+            min-width: 100%;
+            padding: 0 20px;
+            
+
+            .testimonialBody {
+                flex: 6;
+                height: min-content;
+                
+                p {
+                    font-size: 58px;
+                    line-height: 130%;
+                }
+            }
+    
+            .testimonialAuthor {
+                flex: 3;
+                font-size: 28px;
+                padding: 60px 0;
+    
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                gap: 12px;
+            }
+        }
+    }
+}

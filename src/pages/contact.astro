@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navbar/navbar.astro";
+import Hero from "../components/hero/hero.astro";
+import Footer from "../components/footer/footer.astro";
+import SmoothScroll from '../utils/smoothScroll/smoothScroll.astro';
+import ContactForm from "../components/contactForm/contactForm.astro";
+
+---
+
+<Layout title="Harshil">
+    <SmoothScroll/>
+    <Navbar/>
+    <div class="app">
+        <ContactForm/>
+        <Footer/>
+    </div>
+</Layout>
