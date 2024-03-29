@@ -2,6 +2,12 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   font-family: neuzeit-grotesk, sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  &.fullHeight {
+    height: 100vh;
+  }
 }
 
 a {
@@ -20,6 +26,10 @@ a {
   display: flex;
   flex-direction: column;
   gap: 52px;
+
+  &.fullHeight {
+    flex: 1;
+  }
 }
 
 .row {
@@ -38,4 +48,8 @@ input, textarea {
   padding: 0 35px;
   color: var(--color-text);
   font-size: 24px;
+}
+
+.hidden {
+  display: none;
 }

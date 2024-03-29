@@ -6,12 +6,13 @@ import Footer from "../components/footer/footer.astro";
 import SmoothScroll from '../utils/smoothScroll/smoothScroll.astro';
 import ContactForm from "../components/contactForm/contactForm.astro";
 
+import './contact.scss';
 ---
 
-<Layout title="Harshil">
+<Layout title="Harshil" fullHeight={true}>
     <SmoothScroll/>
     <Navbar/>
-    <div class="app">
+    <div class="app fullHeight">
         <ContactForm/>
         <Footer/>
     </div>

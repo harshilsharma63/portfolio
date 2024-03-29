@@ -1,6 +1,55 @@
 ---
+import Icon from '../icon/icon.astro';
+
+import success_icon from  '../../media/icons/check-circle.svg?raw';
+import error_icon from '../../media/icons/x-circle.svg?raw';
+import loading_icon from '../../media/icons/loader.svg?raw';
+
 import './style.scss';
 ---
+
+<script>
+    document.querySelector('.contactForm form')!.addEventListener('submit', submitForm);
+
+   async function submitForm(e) {
+        e.preventDefault();
+
+        // disable the submit button and show loading state
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.classList.add('loading');
+
+        const successMessage = document.querySelector('.successMessage');
+        successMessage!.classList.add('hidden');
+
+        const errorMessage = document.querySelector('.errorMessage');
+        errorMessage!.classList.add('hidden');
+
+        const formData = new FormData(e.target);
+        const formSubmissionURL = 'https://script.google.com/macros/s/AKfycbysTs16bzRdy_unNOyHgZyEAqGDELkdKwWwg9O23HVcKV9nmwDnzqhxMKSkCkwqnqtb/exec';
+        const fetchOptions: RequestInit = {
+            method: 'POST',
+            redirect: 'follow',
+            body: formData,
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8",
+            },
+        };
+
+        const response = await fetch(formSubmissionURL, fetchOptions);
+        submitButton.classList.remove('loading');
+        submitButton.classList.add('hidden');
+        
+        if (response.ok) {
+            successMessage!.classList.remove('hidden');
+        } else {
+            errorMessage!.classList.remove('hidden');
+        }
+
+        submitButton.classList.remove('loading');
+   }
+    
+</script>
 
 <div class="contactForm">
     <div class="header">
@@ -9,10 +58,25 @@ import './style.scss';
     </div>
     <div class="form">
         <form>
-            <input name="name" placeholder="Name" required/>
-            <input name="email" placeholder="Your email address" required/>
-            <textarea name="message" placeholder="Tell us more about your project" required/>
-            <button type="submit">Send</button>
+            <input name="Name" placeholder="Name" required/>
+            <input name="Email" placeholder="Your email address" required/>
+            <textarea name="Query" placeholder="Tell us more about your project" required/>
+            <button type="submit">
+                <Icon image={loading_icon}/>
+                <span>Send</span>
+            </button>
         </form>
+        
+        <div class="formResult">
+            <div class="message successMessage hidden">
+                <Icon image={success_icon}/>
+                Your message has been sent successfully
+            </div>
+            <div class="message errorMessage hidden">
+                <Icon image={error_icon}/>
+                Something went wrong. Please try again
+            </div>
+        </div>
+
     </div>
 </div>

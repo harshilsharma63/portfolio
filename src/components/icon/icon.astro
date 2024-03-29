@@ -3,11 +3,12 @@ import './style.scss';
 
 interface Props {
     image: any
+    className?: string
 }
 
-const {image} = Astro.props;
+const {image, className} = Astro.props;
 ---
 
-<div class="icon">
+<div class:list={["icon", className]}>
     <Fragment set:html={image}/>
 </div>

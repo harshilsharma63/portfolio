@@ -22,7 +22,7 @@
             flex-direction: column;
             gap: 35px;
 
-            textarea[name="message"] {
+            textarea[name="Query"] {
                 height: 200px;
                 padding-top: 30px;
                 padding-bottom: 30px;
@@ -33,7 +33,55 @@
                 color: var(--color-bg);
                 height: 70px;
                 border-radius: 35px;
-                font-size: 34px;
+                font-size: 30px;
+                cursor: pointer;
+
+                .icon {
+                    display: none;
+
+                    svg {
+                        animation: rotate-center 1s linear infinite both;
+                    }
+                }
+
+                &.loading {
+                    .icon {
+                        display: inline !important;
+                    }
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .formResult {
+        margin-top: 35px;
+        text-align: center;
+        font-size: 30px;
+
+        .message {
+            animation: fade-in-fwd 1.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            .icon {
+                display: inline;
+            }
+
+            &.successMessage {
+                .icon {
+                    svg {
+                        stroke: limegreen;
+                    }
+                }
+            }
+
+            &.errorMessage {
+                .icon {
+                    svg {
+                        stroke: orangered;
+                    }
+                }
             }
         }
     }
