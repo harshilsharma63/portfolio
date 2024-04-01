@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/navbar/navbar.astro";
+import Hero from "../components/hero/hero.astro";
+import Footer from "../components/footer/footer.astro";
+import SmoothScroll from '../utils/smoothScroll/smoothScroll.astro';
+import ContactForm from "../components/contactForm/contactForm.astro";
+
+import './about.scss';
+import AboutHero from "../components/aboutHero/aboutHero.astro";
+import WorkWithMe from "../components/workWithMe/workWithMe.astro";
+import Skills from "../components/skills/skills.astro";
+---
+
+<Layout title="Harshil" fullHeight={true}>
+    <SmoothScroll/>
+    <Navbar/>
+    <div class="app">
+        <AboutHero/>
+        <WorkWithMe/>
+        <Skills/>
+        <Footer/>
+    </div>
+</Layout>

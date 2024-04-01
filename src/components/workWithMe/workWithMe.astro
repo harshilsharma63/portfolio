@@ -1,0 +1,39 @@
+---
+import Icon from '../icon/icon.astro';
+import './style.scss';
+
+import star_icon from '../../media/icons/star.svg?raw';
+---
+
+<div class="workWithMe">
+    <div class="row heading">
+        Why work<br/>
+        with me?
+    </div>
+
+    <div class="row content">
+        <div>
+            <Icon image={star_icon}/>
+            <div class="title">Client Centric</div>
+            <div class="text">
+                Your goals are our focus. I listen, understand, and work closely with you to achieve your vision.
+            </div>
+        </div>
+
+        <div>
+            <Icon image={star_icon}/>
+            <div class="title">Tailored Solutions</div>
+            <div class="text">
+                I don't do one-size-fits-all. I craft solutions that are unique to your business, ensuring your customers always have a great experience.
+            </div>
+        </div>
+
+        <div>
+            <Icon image={star_icon}/>
+            <div class="title">Creative Innovation</div>
+            <div class="text">
+                I bring cross domain knowledge and experience to device creative solutions that make things work.
+            </div>
+        </div>
+    </div>
+</div>

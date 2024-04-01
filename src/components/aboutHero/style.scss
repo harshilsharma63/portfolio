@@ -1,0 +1,45 @@
+.aboutHero {
+    .title {
+        font-family: roc-grotesk, sans-serif;
+        font-weight: bold;
+        font-size: 300px;
+        text-align: left;
+    
+        span {
+          display: block;
+    
+          &:last-child {
+            margin-top: -50px;
+          }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+
+        .left {
+            flex: 3;
+            
+            display: flex;
+            flex-direction: column;
+            font-size: 26px;
+            gap: 80px;
+        }
+
+        .right {
+            flex: 2;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 5%;
+
+            .pillButton {
+                width: 60%;
+            }
+        }
+    }
+}
+
