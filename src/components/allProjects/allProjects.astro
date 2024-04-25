@@ -10,6 +10,7 @@ import mattermost_thumbnail from '../../media/projectThumbnails/mattermost.png';
 import focalboard_thumbnail from '../../media/projectThumbnails/focalboard.png';
 import mobile_thumbnail from '../../media/projectThumbnails/mm-mobile.png';
 import standup_raven from '../../media/projectThumbnails/standup_raven.png';
+import user_survey_thumbnail from '../../media/projectThumbnails/user_survey.png';
 ---
 
 <div class="allProjects projects">
@@ -24,6 +25,14 @@ import standup_raven from '../../media/projectThumbnails/standup_raven.png';
         </div>
     </div>
     <div class="projectCards">
+        <ProjectCard
+                className="userSurvey"
+                image={user_survey_thumbnail}
+                alignImage='right'
+                title="User Survey Plugin"
+                subtitle="Mattermost Plugin"
+                link="https://github.com/mattermost/mattermost-plugin-user-survey"
+        />
         <ProjectCard
                 className="mattermost"
                 image={mattermost_thumbnail}
