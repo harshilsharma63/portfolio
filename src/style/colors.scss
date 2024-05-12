@@ -7,6 +7,7 @@ $color-bright-violet: #7A19F3;
 $color-pink: #EF5DA8;
 $color-lava-orange: #E3641B;
 $color-race-blue: #1684d4;
+$color-hot-orange: #FF5722;
 
 
 body {
@@ -15,6 +16,7 @@ body {
     --color-pink: #{$color-pink};
     --color-lava-orange: #{$color-lava-orange};
     --color-race-blue: #{$color-race-blue};
+    --color-hot-orange: #{$color-hot-orange};
 }
 
 body.dark {

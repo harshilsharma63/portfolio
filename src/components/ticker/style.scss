@@ -1,12 +1,14 @@
 .ticker {
-    .text {
-        margin-top: 300px;
-        margin-bottom: 200px;
-        background: var(--color-mid);
+    .pattern {
         font-size: 200px;
         font-weight: bolder;
         white-space: nowrap;
         overflow: hidden;
+        background-color: rgb(125 125 125);
+        width: 100%;
+        height: 300px;
+        filter: blur(200px);
+        mask-size: 50%;
         
         span {
             opacity: 0.4;

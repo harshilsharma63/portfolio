@@ -1,13 +1,17 @@
 ---
 import './style.scss';
+import Icon from '../icon/icon.astro';
+
+import copy from '../../media/icons/copy.svg?raw';
 ---
 
 <script>
     import utils from '../../utils/utils.ts';
     document.querySelector('.copyMailButton')?.addEventListener('click', (e) => {
+        e.preventDefault();
         utils.copyEmailAddress(e);
     });
-    
+
 </script>
 
 <div class="footer">
@@ -15,12 +19,21 @@ import './style.scss';
         <div class="left">
             <span>{new Date().getFullYear()} ©</span>
         </div>
-        
+
         <div class="right">
-            <a href="https://github.com/harshilsharma63" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/harshilsharma63/" target="_blank">LinkedIn</a>
-            <a href="https://www.upwork.com/" target="_blank">UpWork</a>
-            <a class="copyMailButton">Mail</a>
+            <div>
+                <a href="https://github.com/harshilsharma63" target="_blank">GitHub</a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/harshilsharma63/" target="_blank">LinkedIn</a>
+            </div>
+            <div>
+                <a href="https://www.upwork.com/" target="_blank">UpWork</a>
+            </div>
+            <div class="copyEmail">
+                <a href="#" class="copyMailButton">Mail <Icon image={copy}/></a>
+
+            </div>
         </div>
     </div>
 </div>

@@ -1,9 +1,9 @@
 ---
+import { Image } from 'astro:assets';
 import './style.scss';
+import pattern from '../../media/topography.svg';
 ---
 
 <div class="ticker">
-    <div class="text">
-       <span>Graphic layout of online interactions</span>
-    </div>
+    <div class="pattern" style=`mask-image: url(${pattern.src})`/>
 </div>
