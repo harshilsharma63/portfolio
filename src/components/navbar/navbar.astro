@@ -1,19 +1,8 @@
 ---
 import './style.scss';
-
-interface Props {
-    activeTab?: number
-    mode?: 'scroll' | 'nav'
-}
-
-const {activeTab, mode} = Astro.props;
-
 ---
 <script>
-    import utils from '../../utils/utils.ts';
-    
     function setActiveTab() {
-        console.log('setActiveTab');
         const pathName = window.location.pathname;
 
         const tabs = Array.from(document.querySelectorAll('.navbar_option'));
@@ -31,22 +20,6 @@ const {activeTab, mode} = Astro.props;
     document.addEventListener('DOMContentLoaded', function() {
         setActiveTab();
     }, false);
-    
-    // document.querySelector('.optionHome')?.addEventListener('click', () => {
-    //     utils.smoothScrollTo('top');
-    // });
-
-    // document.querySelector('.optionProjects')?.addEventListener('click', () => {
-    //     utils.smoothScrollTo('.projects');
-    // });
-
-    // document.querySelector('.optionAbout')?.addEventListener('click', () => {
-    //     utils.smoothScrollTo('.expertise');
-    // });
-
-    // document.querySelector('.optionContact')?.addEventListener('click', () => {
-    //     utils.smoothScrollTo('bottom', 0);
-    // });
 </script>
 
 <div class="navbar">

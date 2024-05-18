@@ -9,7 +9,7 @@ import './style.scss';
 ---
 
 <script>
-    document.querySelector('.contactForm form')!.addEventListener('submit', submitForm);
+    document.querySelector('.contactForm form').addEventListener('submit', submitForm);
 
    async function submitForm(e) {
         e.preventDefault();
@@ -27,6 +27,7 @@ import './style.scss';
 
         const formData = new FormData(e.target);
         const formSubmissionURL = 'https://script.google.com/macros/s/AKfycbysTs16bzRdy_unNOyHgZyEAqGDELkdKwWwg9O23HVcKV9nmwDnzqhxMKSkCkwqnqtb/exec';
+       // eslint-disable-next-line no-undef
         const fetchOptions: RequestInit = {
             method: 'POST',
             redirect: 'follow',
@@ -39,7 +40,7 @@ import './style.scss';
         const response = await fetch(formSubmissionURL, fetchOptions);
         submitButton.classList.remove('loading');
         submitButton.classList.add('hidden');
-        
+
         if (response.ok) {
             successMessage!.classList.remove('hidden');
         } else {
@@ -48,7 +49,7 @@ import './style.scss';
 
         submitButton.classList.remove('loading');
    }
-    
+
 </script>
 
 <div class="contactForm">
@@ -66,7 +67,7 @@ import './style.scss';
                 <span>Send</span>
             </button>
         </form>
-        
+
         <div class="formResult">
             <div class="message successMessage hidden">
                 <Icon image={success_icon}/>
