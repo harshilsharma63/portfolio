@@ -9,9 +9,12 @@ import './style.scss';
 ---
 
 <script>
-    document.querySelector('.contactForm form').addEventListener('submit', submitForm);
+    const form = document.querySelector('.contactForm form');
+    if (form) {
+        form.addEventListener('submit', submitForm);
+    }
 
-   async function submitForm(e) {
+   async function submitForm(e: any) {
         e.preventDefault();
 
         // disable the submit button and show loading state
@@ -58,7 +61,7 @@ import './style.scss';
         <h1>Let's discuss it together</h1>
     </div>
     <div class="form">
-        <form>
+        <form onsubmit="">
             <input name="Name" placeholder="Name" required/>
             <input name="Email" placeholder="Your email address" required/>
             <textarea name="Query" placeholder="Tell us more about your project" required/>

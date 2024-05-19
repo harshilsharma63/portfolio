@@ -9,6 +9,8 @@ interface Props {
 	fullHeight?: boolean
 }
 
+import '../style/modern-normalize.css';
+
 const { title, fullHeight } = Astro.props;
 ---
 
@@ -21,7 +23,6 @@ const { title, fullHeight } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
 		<link rel="stylesheet" href="https://use.typekit.net/xis4ylh.css">
 	</head>
 	<body class:list={['dark', fullHeight ? 'fullHeight' : '']}>
