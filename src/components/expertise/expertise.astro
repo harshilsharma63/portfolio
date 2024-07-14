@@ -1,5 +1,19 @@
 ---
 import './style.scss';
+
+import aws from '../../media/icons/aws.svg?raw';
+import go from '../../media/icons/go.svg?raw';
+import react from '../../media/icons/react.svg?raw';
+import astro from '../../media/icons/astro.svg?raw';
+import docker from '../../media/icons/docker.svg?raw';
+import elasticsearch from '../../media/icons/elasticsearch.svg?raw';
+import lambda from '../../media/icons/lambda.svg?raw';
+import git from '../../media/icons/git.svg?raw';
+import next from '../../media/icons/next.svg?raw';
+import postgres from '../../media/icons/postgres.svg?raw';
+import tailwind from '../../media/icons/tailwind.svg?raw';
+import python from '../../media/icons/python.svg?raw';
+import mattermost from '../../media/icons/mattermost.svg?raw';
 ---
 
 <div class="expertise">
@@ -14,43 +28,49 @@ import './style.scss';
                     <div class="tooltip">
                         Golang
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg"/>
+                    <Fragment set:html={go}/>
                 </div>
                 <div class="tech">
                     <div class="tooltip">
                         React
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg"/>
+                    <Fragment set:html={react}/>
                 </div>
                 <div class="tech">
                     <div class="tooltip">
                         AWS
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/aws-2.svg"/>
+                    <Fragment set:html={lambda}/>
                 </div>
                 <div class="tech">
                     <div class="tooltip">
                         Git
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"/>
+                    <Fragment set:html={git}/>
+                </div>
+                <div class="tech">
+                    <div class="tooltip">
+                        Docker
+                    </div>
+                    <Fragment set:html={docker}/>
                 </div>
                 <div class="tech">
                     <div class="tooltip">
                         Postgres
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"/>
+                    <Fragment set:html={postgres}/>
                 </div>
                 <div class="tech">
                     <div class="tooltip">
                         Python
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"/>
+                    <Fragment set:html={python}/>
                 </div>
                 <div class="tech">
                     <div class="tooltip">
-                        Redis
+                        Elasticsearch
                     </div>
-                    <img src="https://cdn.worldvectorlogo.com/logos/redis.svg"/>
+                    <Fragment set:html={elasticsearch}/>
                 </div>
                 <div class="tech">
                     <span>. . .</span>
@@ -63,16 +83,16 @@ import './style.scss';
             <p>Cras suscipit tortor et dui fringilla, nec iaculis ipsum vulputate. Aliquam iaculis, urna in fringilla consectetur, augue purus maximus neque, sed ultrices urna libero vel neque.</p>
             <div class="techWrapper">
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"/>
+                    <Fragment set:html={react}/>
                 </div>
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"/>
+                    <Fragment set:html={next}/>
                 </div>
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"/>
+                    <Fragment set:html={astro}/>
                 </div>
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/redis.svg"/>
+                    <Fragment set:html={tailwind}/>
                 </div>
             </div>
         </div>
@@ -84,17 +104,14 @@ import './style.scss';
             <p>Cras suscipit tortor et dui fringilla, nec iaculis ipsum vulputate. Aliquam iaculis, urna in fringilla consectetur, augue purus maximus neque, sed ultrices urna libero vel neque. Nulla facilisi.</p>
             <div class="techWrapper">
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg"/>
+                    <Fragment set:html={go}/>
                 </div>
 
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/postgresql.svg"/>
+                    <Fragment set:html={postgres}/>
                 </div>
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/python-5.svg"/>
-                </div>
-                <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/redis.svg"/>
+                    <Fragment set:html={python}/>
                 </div>
             </div>
         </div>
@@ -104,13 +121,13 @@ import './style.scss';
             <p>Cras suscipit tortor et dui fringilla, nec iaculis ipsum vulputate. Aliquam iaculis, urna in fringilla consectetur, augue purus maximus neque, sed ultrices urna libero vel neque. Nulla facilisi. Ut et sollicitudin diam.</p>
             <div class="techWrapper">
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/mattermost-2.svg"/>
+                    <Fragment set:html={mattermost}/>
                 </div>
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/golang-1.svg"/>
+                    <Fragment set:html={react}/>
                 </div>
                 <div class="tech">
-                    <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg"/>
+                    <Fragment set:html={go}/>
                 </div>
             </div>
         </div>
