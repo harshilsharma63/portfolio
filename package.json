@@ -15,6 +15,7 @@
     "@astrojs/check": "^0.5.9",
     "@studio-freight/lenis": "^1.0.42",
     "astro": "^4.5.4",
+    "astro-tooltips": "^0.6.2",
     "modern-normalize": "^2.0.0",
     "typescript": "^5.4.2"
   },
