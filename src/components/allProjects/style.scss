@@ -1,5 +1,7 @@
 @use 'sass:color';
 
+@import 'src/style/breakpoints';
+
 .allProjects {
   .header {
     display: flex;
@@ -25,7 +27,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 120px;
+    row-gap: 30px;
+
+    @media screen and (max-width: $widescreen) {
+
+    }
 
     .thumbnail.userSurvey {
       background: var(--color-hot-orange);

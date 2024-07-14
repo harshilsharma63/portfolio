@@ -11,6 +11,10 @@
     padding: 200px 0;
   }
 
+  @media screen and (max-width: $widescreen) {
+    height: calc(100vh - 120px - 40px - 40px);
+  }
+
   .title {
     font-family: roc-grotesk, sans-serif;
     font-weight: bold;
@@ -18,7 +22,7 @@
     font-size: 20rem;
 
     @media screen and (min-width: $widescreen) {
-      font-size: 30rem;
+      font-size: 18vw;
     }
 
     flex: 1;

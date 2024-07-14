@@ -8,9 +8,9 @@ import chevron_down from '../../media/icons/chevron_down.svg?raw';
 
 <script>
     import utils from '../../utils/utils.ts';
-    
+
     document.querySelector('.scrollDownButton')?.addEventListener('click', () => {
-        utils.smoothScrollTo('.projects');
+        utils.smoothScrollTo('.intro', -100);
     });
 </script>
 
